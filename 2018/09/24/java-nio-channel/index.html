@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Markdown," />
+  <meta name="keywords" content="Java NIO," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="在基础的语法上扩展可以实现表格，代码块，语法高亮，URL自动链接，脚注功能。这些可以被轻量的标记语言或兼容的 markdown 处理器来实现。">
-<meta name="keywords" content="Markdown">
+<meta name="description" content="Java NIO 中的 Channel（通道） 相对于标准 IO 有以下不同：    双向  即可以从 Channel 中读取数据，也可以写入 Channel ，而流的读写都是单向的。 非阻塞  当通道读写等事件就绪时可以进行读写操作，非就绪时可以进行其他操作，而流的读写是阻塞的。 读写需要 Buffer  通道中的数据必须先读取到一个 Buffer，或从一个 Buffer 中写入">
+<meta name="keywords" content="Java NIO">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown 扩展语法">
-<meta property="og:url" content="http://xieyinglin.github.io/2018/08/25/markdown-extend-syntax/index.html">
+<meta property="og:title" content="Java NIO 学习笔记(2) - Channel">
+<meta property="og:url" content="http://xieyinglin.github.io/2018/09/24/java-nio-channel/index.html">
 <meta property="og:site_name" content="XieYingLin&#39;s Blog">
-<meta property="og:description" content="在基础的语法上扩展可以实现表格，代码块，语法高亮，URL自动链接，脚注功能。这些可以被轻量的标记语言或兼容的 markdown 处理器来实现。">
+<meta property="og:description" content="Java NIO 中的 Channel（通道） 相对于标准 IO 有以下不同：    双向  即可以从 Channel 中读取数据，也可以写入 Channel ，而流的读写都是单向的。 非阻塞  当通道读写等事件就绪时可以进行读写操作，非就绪时可以进行其他操作，而流的读写是阻塞的。 读写需要 Buffer  通道中的数据必须先读取到一个 Buffer，或从一个 Buffer 中写入">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-26T10:17:51.000Z">
+<meta property="og:updated_time" content="2018-09-24T09:17:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown 扩展语法">
-<meta name="twitter:description" content="在基础的语法上扩展可以实现表格，代码块，语法高亮，URL自动链接，脚注功能。这些可以被轻量的标记语言或兼容的 markdown 处理器来实现。">
+<meta name="twitter:title" content="Java NIO 学习笔记(2) - Channel">
+<meta name="twitter:description" content="Java NIO 中的 Channel（通道） 相对于标准 IO 有以下不同：    双向  即可以从 Channel 中读取数据，也可以写入 Channel ，而流的读写都是单向的。 非阻塞  当通道读写等事件就绪时可以进行读写操作，非就绪时可以进行其他操作，而流的读写是阻塞的。 读写需要 Buffer  通道中的数据必须先读取到一个 Buffer，或从一个 Buffer 中写入">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://xieyinglin.github.io/2018/08/25/markdown-extend-syntax/"/>
+  <link rel="canonical" href="http://xieyinglin.github.io/2018/09/24/java-nio-channel/"/>
 
 
 
 
 
-  <title>Markdown 扩展语法 | XieYingLin's Blog</title>
+  <title>Java NIO 学习笔记(2) - Channel | XieYingLin's Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xieyinglin.github.io/2018/08/25/markdown-extend-syntax/">
+    <link itemprop="mainEntityOfPage" href="http://xieyinglin.github.io/2018/09/24/java-nio-channel/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xieyinglin">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Markdown 扩展语法</h1>
+          <h1 class="post-title" itemprop="name headline">Java NIO 学习笔记(2) - Channel</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-25T15:52:21+00:00">
-                2018-08-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-24T07:18:24+00:00">
+                2018-09-24
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Markdown/" itemprop="url" rel="index">
-                    <span itemprop="name">Markdown</span>
+                  <a href="/categories/Java-NIO/" itemprop="url" rel="index">
+                    <span itemprop="name">Java NIO</span>
                   </a>
                 </span>
 
@@ -333,9 +333,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/25/markdown-extend-syntax/#comments" itemprop="discussionUrl">
+                <a href="/2018/09/24/java-nio-channel/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/08/25/markdown-extend-syntax/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/09/24/java-nio-channel/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -363,109 +363,26 @@
       
 
       
-        <p>在基础的语法上扩展可以实现<code>表格，代码块，语法高亮，URL自动链接，脚注</code>功能。这些可以被轻量的标记语言或兼容的 markdown 处理器来实现。</p>
-<a id="more"></a>
-<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>使用至少3个中划线来创建列标题，单元格之间使用 | 进行分隔, 单元格结尾的 | 可选。<br>例如:</p>
-<p>|Syntax &nbsp;&nbsp;&nbsp;&nbsp;| Description |<br>|——— | ———– |<br>|Header&nbsp;&nbsp;&nbsp;&nbsp;| Title   &nbsp;&nbsp;&nbsp;&nbsp;    |<br>|Paragh&nbsp;&nbsp;&nbsp;&nbsp;| Text    &nbsp;&nbsp;&nbsp;&nbsp;    |<br>|Line  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Line text   |</p>
-<p>效果如下：</p>
-<table>
-<thead>
-<tr>
-<th>Syntax</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Header</td>
-<td>Title</td>
-</tr>
-<tr>
-<td>Paragh</td>
-<td>Text</td>
-</tr>
-<tr>
-<td>Line</td>
-<td>Line text</td>
-</tr>
-</tbody>
-</table>
-<h2 id="表格对齐"><a href="#表格对齐" class="headerlink" title="表格对齐"></a>表格对齐</h2><p>表格中的列默认左对齐，可以通过在标题行的中划线左侧，两侧，右侧分别加冒号（:）代表向左对齐，居中，向右对齐</p>
-<p>例如：</p>
-<p>|Syntax    | Description | Test Text     |<br>|:——– | ———–:| ———:   |<br>|Header    | Title       | first         |<br>|Paragh    | Text        | second        |<br>|Line      | Line text   | third         |</p>
-<p>效果如下：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Syntax</th>
-<th style="text-align:center">Description</th>
-<th style="text-align:right">Test Text</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Header</td>
-<td style="text-align:center">Title</td>
-<td style="text-align:right">first</td>
-</tr>
-<tr>
-<td style="text-align:left">Paragh</td>
-<td style="text-align:center">Text</td>
-<td style="text-align:right">second</td>
-</tr>
-<tr>
-<td style="text-align:left">Line</td>
-<td style="text-align:center">Line text</td>
-<td style="text-align:right">third</td>
-</tr>
-</tbody>
-</table>
-<h2 id="格式化表格中的文本"><a href="#格式化表格中的文本" class="headerlink" title="格式化表格中的文本"></a>格式化表格中的文本</h2><p>可以对表格中的文本使用链接，code(使用 ` ,不是代码块)，加粗。<br>不能使用标题，块引用，列表，水平线，图片，html 标签。</p>
-<h2 id="转义表格中的管道符号"><a href="#转义表格中的管道符号" class="headerlink" title="转义表格中的管道符号"></a>转义表格中的管道符号</h2><p>可以使用 html 字符码（&amp; #124;）来进行转义管道符（|）</p>
-<h1 id="包围的代码块"><a href="#包围的代码块" class="headerlink" title="包围的代码块"></a>包围的代码块</h1><p>正常的代码块需要每行都缩进4个空格或1个Tab，如果编辑器支持可以在代码块前后增加一行添加三个` 或者三个 ~</p>
-<p>例如：</p>
-<p>```<br>{<br>  “firstName”: “John”,<br>  “lastName”: “smith”,<br>  “age”: 25<br>}<br>```</p>
-<p>效果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;firstName&quot;: &quot;John&quot;,</span><br><span class="line">  &quot;lastName&quot;: &quot;smith&quot;,</span><br><span class="line">  &quot;age&quot;: 25</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="语法高亮"><a href="#语法高亮" class="headerlink" title="语法高亮"></a>语法高亮</h2><p>markdown 支持对包围的代码块进行语法高亮，可以在开始行的标记后指明代码块的语言。</p>
-<p>例如：</p>
-<p>```json<br>{<br>  “firstName”: “John”,<br>  “lastName”: “smith”,<br>  “age”: 25<br>}<br>```</p>
-<p>效果如下：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"firstName"</span>: <span class="string">"John"</span>,</span><br><span class="line">  <span class="attr">"lastName"</span>: <span class="string">"smith"</span>,</span><br><span class="line">  <span class="attr">"age"</span>: <span class="number">25</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h1><p>脚注可以对文本中的某个词组进行解释，语法是：[^标识符]， 标识符可以是数字或文本（不能包含空格或Tab），然后在文档其他除了部分元素（）内添加脚注说明。语法是 [^标识符]: 说明。</p>
-<p>例如：</p>
-<p>Here’s a simple footnote,[^1] and here’s a longer one.[^bignote]</p>
-<p>[^1]: This is the first footnote.</p>
-<p>[^bignote]: Here’s one with multiple paragraphs and code.</p>
-<p>效果：</p>
-<p>Here’s a simple footnote,[^1] and here’s a longer one.[^bignote]</p>
-<p>[^1]: This is the first footnote.</p>
-<p>[^bignote]: Here’s one with multiple paragraphs and code.</p>
-<blockquote>
-<p>如果显示不正常，则说明该程序不支持</p>
-</blockquote>
-<h1 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h1><p>在文本前后增加两个波浪符号即可实现。</p>
-<p>例如：</p>
-<p>~~The world is flat.~~ We now know that the world is round.</p>
-<p>效果：</p>
-<p><del>The world is flat.</del> We now know that the world is round.</p>
-<h1 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h1><p>任务列表就是开始带有多选框的列表。<br>语法：- [x] , 在列表项的开始使用 - ,然后一个空格后使用中括号，里面的x代表选中</p>
-<p>例如：</p>
-<p>- [x] Write the press release<br>- [ ] Update the website<br>- [ ] Contact the media</p>
-<p>效果如下：</p>
+        <p>Java NIO 中的 Channel（通道） 相对于标准 IO 有以下不同：  </p>
 <ul>
-<li style="list-style: none"><input type="checkbox" checked> Write the press release</li>
-<li style="list-style: none"><input type="checkbox"> Update the website</li>
-<li style="list-style: none"><input type="checkbox"> Contact the media</li>
+<li>双向<br>  即可以从 Channel 中读取数据，也可以写入 Channel ，而流的读写都是单向的。</li>
+<li>非阻塞<br>  当通道读写等事件就绪时可以进行读写操作，非就绪时可以进行其他操作，而流的读写是阻塞的。</li>
+<li>读写需要 Buffer<br>  通道中的数据必须先读取到一个 Buffer，或从一个 Buffer 中写入<a id="more"></a>
+</li>
 </ul>
-<h1 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h1><p>正常来说，我们在 markdown 文件中添加url会自动识别为可点击链接，如果需要禁用该功能，可以在链接使用code即 `.</p>
-<p>例如：</p>
-<p><a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a></p>
-<p>添加code之后：</p>
-<p>`<a href="http://www.baidu.com`" target="_blank" rel="noopener">http://www.baidu.com`</a></p>
-<p>效果：</p>
-<p><code>http://www.baidu.com</code></p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://www.markdownguide.org/extended-syntax" target="_blank" rel="noopener">https://www.markdownguide.org/extended-syntax</a></p>
+<h3 id="Channel-的实现"><a href="#Channel-的实现" class="headerlink" title="Channel 的实现"></a>Channel 的实现</h3><p>在 Java NIO 中主要的 Channel 实现有：</p>
+<ul>
+<li>ServerSocketChannel<br>  监听新进来的 Tcp 连接，对每一个新的连接都会创建一个 SocketChannel。</li>
+<li>SocketChannel<br>  能通过 TCP 连接服务器进行读写</li>
+<li>DatagramChannel<br>  能通过 UDP 连接进行数据读写</li>
+<li>FileChannel<br>  能从文件中进行读写数据。<blockquote>
+<p>注意: FileChannel 是阻塞的，不具有非阻塞特性。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Channel-基本示例"><a href="#Channel-基本示例" class="headerlink" title="Channel 基本示例"></a>Channel 基本示例</h3><p>下面使用 FileChannel 读取数据到 Buffer 中:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">RandomAccessFile accessFile = <span class="keyword">new</span> RandomAccessFile(<span class="string">"/Users/xieyinglin/Downloads/28094752"</span>, <span class="string">"r"</span>);</span><br><span class="line"></span><br><span class="line">    FileChannel fileChannel = accessFile.getChannel();</span><br><span class="line"></span><br><span class="line">    ByteBuffer buffer = ByteBuffer.allocate(<span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> read = -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        <span class="keyword">while</span>((read = fileChannel.read(buffer)) != -<span class="number">1</span>)&#123;<span class="comment">//读取数据到 buffer 中</span></span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">"Read "</span> + read);</span><br><span class="line"></span><br><span class="line">            buffer.flip();<span class="comment">//切换为读模式</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span>(buffer.hasRemaining())&#123;</span><br><span class="line">                <span class="comment">//Buffer 只要有剩余数据就读取</span></span><br><span class="line">                System.out.print(buffer.get());</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            buffer.clear();<span class="comment">//清空 buffer</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line"></span><br><span class="line">        fileChannel.close();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>参考<br><a href="http://tutorials.jenkov.com/java-nio/channels.html" target="_blank" rel="noopener">http://tutorials.jenkov.com/java-nio/channels.html</a> 英文版<br><a href="http://ifeve.com/channels/" target="_blank" rel="noopener">http://ifeve.com/channels/</a> 中文版</p>
 
       
     </div>
@@ -489,8 +406,8 @@
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>本文作者:</span><a href="/" title="访问 xieyinglin 的个人博客">xieyinglin</a></p>
-  <p><span>本文链接:</span><a href="/2018/08/25/markdown-extend-syntax/" title="Markdown 扩展语法">http://xieyinglin.github.io/2018/08/25/markdown-extend-syntax/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://xieyinglin.github.io/2018/08/25/markdown-extend-syntax/"  aria-label="复制成功！"></i></span>
+  <p><span>本文链接:</span><a href="/2018/09/24/java-nio-channel/" title="Java NIO 学习笔记(2) - Channel">http://xieyinglin.github.io/2018/09/24/java-nio-channel/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://xieyinglin.github.io/2018/09/24/java-nio-channel/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>版权声明:</span>转载请保留原文链接及作者。</p>  
 </div>
@@ -515,7 +432,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+            <a href="/tags/Java-NIO/" rel="tag"># Java NIO</a>
           
         </div>
       
@@ -528,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/25/markdown-baisc-syntax/" rel="next" title="Mardown 基本语法">
-                <i class="fa fa-chevron-left"></i> Mardown 基本语法
+              <a href="/2018/09/23/java-nio-getstarted/" rel="next" title="Java NIO 学习笔记(1) - 概述">
+                <i class="fa fa-chevron-left"></i> Java NIO 学习笔记(1) - 概述
               </a>
             
           </div>
@@ -538,8 +455,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/09/23/java-nio-getstarted/" rel="prev" title="Java NIO 学习笔记(1) - 概述">
-                Java NIO 学习笔记(1) - 概述 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/09/24/java-nio-buffer/" rel="prev" title="Java NIO 学习笔记(3) - Buffer">
+                Java NIO 学习笔记(3) - Buffer <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -692,7 +609,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#表格"><span class="nav-number">1.</span> <span class="nav-text">表格</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表格对齐"><span class="nav-number">1.1.</span> <span class="nav-text">表格对齐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格式化表格中的文本"><span class="nav-number">1.2.</span> <span class="nav-text">格式化表格中的文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转义表格中的管道符号"><span class="nav-number">1.3.</span> <span class="nav-text">转义表格中的管道符号</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#包围的代码块"><span class="nav-number">2.</span> <span class="nav-text">包围的代码块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语法高亮"><span class="nav-number">2.1.</span> <span class="nav-text">语法高亮</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#脚注"><span class="nav-number">3.</span> <span class="nav-text">脚注</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除线"><span class="nav-number">4.</span> <span class="nav-text">删除线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#任务列表"><span class="nav-number">5.</span> <span class="nav-text">任务列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自动链接"><span class="nav-number">6.</span> <span class="nav-text">自动链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Channel-的实现"><span class="nav-number">1.</span> <span class="nav-text">Channel 的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Channel-基本示例"><span class="nav-number">2.</span> <span class="nav-text">Channel 基本示例</span></a></li></ol></div>
             
 
           </div>
@@ -862,9 +779,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://xieyinglin.github.io/2018/08/25/markdown-extend-syntax/';
-          this.page.identifier = '2018/08/25/markdown-extend-syntax/';
-          this.page.title = 'Markdown 扩展语法';
+          this.page.url = 'http://xieyinglin.github.io/2018/09/24/java-nio-channel/';
+          this.page.identifier = '2018/09/24/java-nio-channel/';
+          this.page.title = 'Java NIO 学习笔记(2) - Channel';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://xieyinglin.disqus.com/embed.js';
